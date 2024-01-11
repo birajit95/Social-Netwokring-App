@@ -44,6 +44,7 @@ Welcome to the Social Networking App API! This API allows you to build social ne
     source venv/bin/activate
 
 3. **Install Dependencies**
+  - Go to project directory and run
 
     ```bash
     pip install -r requirements.txt
@@ -87,10 +88,10 @@ Welcome to the Social Networking App API! This API allows you to build social ne
 
 ### 3. Send Friend Request
 
-- **Endpoint**: `/social-media/send-request/`
+- **Endpoint**: `/social-media/send-friend-request/`
 - **Method**: `POST`
 - **Request body**:
-  - `target_user` (integer, required): ID of the user to send the friend request.
+  - `requested_user_id` (integer, required): ID of the user to send the friend request.
 
 ### 4. Accept Reject Friend Request
 
@@ -120,11 +121,22 @@ Welcome to the Social Networking App API! This API allows you to build social ne
 
 ### 7. Pending Friend Requests
 
-- **Endpoint**: `/api/search-users/`
+- **Endpoint**: `/api/pending-requests/`
 - **Method**: `GET`
 - **Parameters**:
     -  `page` (Integer, Optional): page number
     - `page_size` (Integer, Optional): page size
+
+
+
+****
+**Note**:
+> I used rest_framewokr Token Authentication, so to call any api you need to pass token like below in request header
+
+- Request Header
+  - {
+    "Authorization": "Token 397bf5a6be4a772882edf6a5931ee80e19652cc0"
+  }
 
 
 
