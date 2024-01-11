@@ -49,13 +49,25 @@ Welcome to the Social Networking App API! This API allows you to build social ne
     ```bash
     pip install -r requirements.txt
 
-4. **Create Migration Files and Migrate the Database**
+4. **Create .env file inside the project directory and place the below code**
+    ```
+      SECRET_KEY=django-insecure-rnqf4kft^qcqn+1-ur4d*$-$vh!s#mpznwjst5-b5fe7l^2l2v
+      DB_NAME=accunox_db
+      DB_USER=postgres
+      DB_PASSWORD=postgres
+      DB_HOST=localhost
+    ```
+
+    ***note:***
+    - create a database in postgres sever named 'accunox_db'
+
+5. **Create Migration Files and Migrate the Database**
 
     ```bash
         python manage.py makemigrations
         python manage.py migrate
 
-5. **Start the Dev Server**
+6. **Start the Dev Server**
     ```
         python manage.py runserver
     ```
